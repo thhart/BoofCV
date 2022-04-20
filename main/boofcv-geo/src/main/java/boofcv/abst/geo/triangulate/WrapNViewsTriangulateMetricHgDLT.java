@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Peter Abeles. All Rights Reserved.
+ * Copyright (c) 2022, Peter Abeles. All Rights Reserved.
  *
  * This file is part of BoofCV (http://boofcv.org).
  *
@@ -36,15 +36,10 @@ import java.util.List;
  */
 public class WrapNViewsTriangulateMetricHgDLT implements TriangulateNViewsMetricH {
 
-	final @Getter TriangulateMetricLinearDLT alg = new TriangulateMetricLinearDLT();
+	final @Getter TriangulateMetricLinearDLT algorithm = new TriangulateMetricLinearDLT();
 
 	@Override
-	public boolean triangulate( List<Point2D_F64> observations, List<Se3_F64> listWorldToView,
-								Point4D_F64 location ) {
-		return GeometricResult.SUCCESS == alg.triangulate(observations, listWorldToView, location);
-	}
-
-	public TriangulateMetricLinearDLT getAlgorithm() {
-		return alg;
+	public boolean triangulate( List<Point2D_F64> observations, List<Se3_F64> listWorldToView, Point4D_F64 location ) {
+		return GeometricResult.SUCCESS == algorithm.triangulate(observations, listWorldToView, location);
 	}
 }
