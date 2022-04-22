@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021, Peter Abeles. All Rights Reserved.
+ * Copyright (c) 2022, Peter Abeles. All Rights Reserved.
  *
  * This file is part of BoofCV (http://boofcv.org).
  *
@@ -40,7 +40,7 @@ public class WrapEssentialNister5 implements EstimateNofEpipolar {
 
 	@Override
 	public boolean process( List<AssociatedPair> points, DogArray<DMatrixRMaj> estimatedModels ) {
-		if (!alg.process(points, estimatedModels))
+		if (!alg.processNormalized(points, estimatedModels))
 			return false;
 
 		return true;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021, Peter Abeles. All Rights Reserved.
+ * Copyright (c) 2022, Peter Abeles. All Rights Reserved.
  *
  * This file is part of BoofCV (http://boofcv.org).
  *
@@ -111,10 +111,10 @@ public class TestDistanceSe3SymmetricSq extends BoofStandardJUnit {
 	 */
 	@Test void nearlyPureRotation() {
 		Se3_F64 keyToCurr = new Se3_F64();
-		keyToCurr.getR().setTo(eulerToMatrix(EulerType.XYZ, 0.0, 0.05, 0.00, null));
+		keyToCurr.getR().setTo(eulerToMatrix(EulerType.XYZ, 0.0, 0.2, 0.00, null));
 		keyToCurr.getT().setTo(1e-4, 0.0, 0.0);
 
-		Point3D_F64 X = new Point3D_F64(0.1, -0.05, 1e4);
+		var X = new Point3D_F64(1e3, -0.05, 1e4);
 
 		AssociatedPair obs = new AssociatedPair();
 

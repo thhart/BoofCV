@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021, Peter Abeles. All Rights Reserved.
+ * Copyright (c) 2022, Peter Abeles. All Rights Reserved.
  *
  * This file is part of BoofCV (http://boofcv.org).
  *
@@ -27,12 +27,12 @@ import org.ddogleg.fitting.modelset.DistanceFromModel;
 import org.ejml.data.DMatrixRMaj;
 
 /**
- * Implementation of {@link GeoModelEstimatorNto1} for epipolar matrices.
+ * Implementation of {@link GeoModelEstimatorNto1} for epipolar matrices given observations in 2D, i.e. pixels
+ * or normalized image coordinates.
  *
  * @author Peter Abeles
  */
-public class EstimateNto1ofEpipolar
-		extends GeoModelEstimatorNto1<DMatrixRMaj, AssociatedPair>
+public class EstimateNto1ofEpipolar extends GeoModelEstimatorNto1<DMatrixRMaj, AssociatedPair>
 		implements Estimate1ofEpipolar {
 	public EstimateNto1ofEpipolar( GeoModelEstimatorN<DMatrixRMaj, AssociatedPair> alg,
 								   DistanceFromModel<DMatrixRMaj, AssociatedPair> distance,
