@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021, Peter Abeles. All Rights Reserved.
+ * Copyright (c) 2022, Peter Abeles. All Rights Reserved.
  *
  * This file is part of BoofCV (http://boofcv.org).
  *
@@ -32,7 +32,7 @@ public interface ModelMatcherMultiview<Model, Point> extends ModelMatcher<Model,
 	 * Specify intrinsic parameters for a particular view
 	 *
 	 * @param view which view this belongs to
-	 * @param intrinsic intrinsic prameters that it should be set to
+	 * @param intrinsic intrinsic parameters that it should be set to
 	 */
 	void setIntrinsic( int view, CameraPinhole intrinsic );
 
